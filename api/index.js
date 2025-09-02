@@ -42,7 +42,4 @@ Respond with 'valid' if the image clearly shows one or more of these conditions,
   }
 });
 
-const PORT = process.env.PORT || 3100;
-app.listen(PORT, () => {
-  console.log(`Malaria Gemini API running on port ${PORT}`);
-});
+module.exports = createServer(app);

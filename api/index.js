@@ -28,7 +28,7 @@ Respond with 'valid' if the image clearly shows one or more of these conditions,
     // Correct way to format content for the Node.js SDK
     const content = [
       { text: prompt },
-      { inlineData: { mimeType: req.file.mimetype, data: imageBytes.toString('base64') } }
+      { inlineData: { mimeType: 'image/jpeg', data: imageBytes.toString('base64') } }
     ];
     
     const result = await model.generateContent({ contents: [{ role: 'user', parts: content }] });

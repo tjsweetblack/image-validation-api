@@ -9,7 +9,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 app.post('/analyze-image', upload.single('image'), async (req, res) => {
   console.log('Received POST /analyze-image');
-  if (!req.file) {
+  if (!req.file) {ss
     return res.status(400).json({ error: 'No image uploaded' });
   }
   try {
@@ -28,7 +28,7 @@ Respond with 'valid' if the image clearly shows one or more of these conditions,
     // Correct way to format content for the Node.js SDK
     const content = [
       { text: prompt },
-      { inlineData: { mimeType: req.file.mimetype, data: imageBytes.toString('base64') } }
+      { inlineData: { mimeType: 'image/jpeg', data: imageBytes.toString('base64') } }
     ];
     
     const result = await model.generateContent({ contents: [{ role: 'user', parts: content }] });

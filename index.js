@@ -42,4 +42,4 @@ Respond with 'valid' if the image clearly shows one or more of these conditions,
   }
 });
 
-module.exports = createServer(app);
+module.exports = app;

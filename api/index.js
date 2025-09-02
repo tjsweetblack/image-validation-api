@@ -9,7 +9,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 app.post('/analyze-image', upload.single('image'), async (req, res) => {
   console.log('Received POST /analyze-image');
-  if (!req.file) {
+  if (!req.file) {ss
     return res.status(400).json({ error: 'No image uploaded' });
   }
   try {
@@ -42,4 +42,4 @@ Respond with 'valid' if the image clearly shows one or more of these conditions,
   }
 });
 
-module.exports = createServer(app);
+module.exports = app;

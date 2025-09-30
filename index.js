@@ -23,7 +23,7 @@ app.post('/analyze-image', upload.single('image'), async (req, res) => {
 - Any other area where water may collect and remain for more than 4 days.
 Respond with 'valid' if the image clearly shows one or more of these conditions, and 'invalid' if none are clearly present. Focus on the presence of standing water and items/areas that can hold water.`;
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-latest' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     // Correct way to format content for the Node.js SDK
     const content = [
